@@ -142,11 +142,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BattleShip.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="BoardState.cpp" />
+    <ClCompile Include="Boat.cpp" />
+    <ClCompile Include="HitSquare.cpp" />
+    <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ScreenManager\ScreenManager\ScreenManager.vcxproj">
       <Project>{0ccc0724-da91-4a8f-8a48-2bdd643095fa}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="BoardState.h" />
+    <ClInclude Include="Boat.h" />
+    <ClInclude Include="HitSquare.h" />
+    <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
