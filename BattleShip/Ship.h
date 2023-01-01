@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <vector>
 #include "Square.h"
+
 enum class Way {
 	EAST, 
 	NORTH,
@@ -17,6 +18,7 @@ private:
 	std::vector<Square> squares;
 
 public:
+
 	/// <summary>
 	/// Constructor of Ship.
 	/// Set the way the ship is facing, in order to create the squares needed with correct coordinates.
