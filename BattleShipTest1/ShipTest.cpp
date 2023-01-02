@@ -17,9 +17,9 @@ namespace BattleShipTest1
 	public:
 		TEST_METHOD_INITIALIZE(ShipInitialize) {
 			shipE = Ship(Way::EAST, l, 0, 0);
-			shipN = Ship(Way::NORTH, l, 0, 4);
+			shipN = Ship(Way::NORTH, l, 0, l-1);
 			shipS = Ship(Way::SOUTH, l, 0, 0);
-			shipW = Ship(Way::WEST, l, 4, 0);
+			shipW = Ship(Way::WEST, l, l-1, 0);
 		}
 
 		TEST_METHOD(TestGetLength) {
@@ -37,7 +37,48 @@ namespace BattleShipTest1
 
 		}
 
-		
+		TEST_METHOD(TestGetSquares) {
+			/* EAST */
+			std::vector<Square> squares = shipE.getSquares();
+			Assert::AreEqual(l, squares.size());
+
+			for (short i = 0; i < l; i++) {
+				Square sq = squares.at(i);
+				Assert::AreEqual(i, sq.getX());
+				Assert::AreEqual(static_cast<short>(0), sq.getY());
+			}
+
+			/* NORTH */
+			squares = shipN.getSquares();
+			Assert::AreEqual(l, squares.size());
+
+			for (short i = 0; i < l; i++) {
+				Square sq = squares.at(i);
+				Assert::AreEqual(static_cast<short>(0), sq.getX());
+				Assert::AreEqual(static_cast<short>(l - i - 1), sq.getY());
+			}
+
+			/* SOUTH */
+			squares = shipS.getSquares();
+			Assert::AreEqual(l, squares.size());
+
+			for (short i = 0; i < l; i++) {
+				Square sq = squares.at(i);
+				Assert::AreEqual(static_cast<short>(0), sq.getX());
+				Assert::AreEqual(i, sq.getY());
+			}
+
+			/* WEST */
+			squares = shipW.getSquares();
+			Assert::AreEqual(l, squares.size());
+
+			for (short i = 0; i < l; i++) {
+				Square sq = squares.at(i);
+				Assert::AreEqual(static_cast<short>(l - 1 - i), sq.getX());
+				Assert::AreEqual(static_cast<short>(0), sq.getY());
+			}
+		}
+
 		TEST_METHOD(TestHit) {
 			/* EAST */
 			// Hit square unavailable for the ship.
