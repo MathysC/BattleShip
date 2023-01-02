@@ -29,7 +29,15 @@ namespace BattleShipTest1
 			Assert::AreEqual(l, shipW.getLength());
 
 		}
+		TEST_METHOD(TestGetWay) {
+			Assert::AreEqual(static_cast<int>(Way::EAST), static_cast<int>(shipE.getWay()));
+			Assert::AreEqual(static_cast<int>(Way::NORTH), static_cast<int>(shipN.getWay()));
+			Assert::AreEqual(static_cast<int>(Way::SOUTH), static_cast<int>(shipS.getWay()));
+			Assert::AreEqual(static_cast<int>(Way::WEST), static_cast<int>(shipW.getWay()));
 
+		}
+
+		
 		TEST_METHOD(TestHit) {
 			/* EAST */
 			// Hit square unavailable for the ship.
