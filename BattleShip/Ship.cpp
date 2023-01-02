@@ -43,6 +43,12 @@ size_t Ship::getLength() const
 {
 	return this->length;
 }
+
+Way Ship::getWay() const
+{
+	return this->way;
+}
+
 bool Ship::hit(short const _x, short const _y)
 {
 	// If the ship has already sunk, it cannot be hit anymore.

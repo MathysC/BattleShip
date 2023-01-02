@@ -40,6 +40,11 @@ public:
 	/// <returns>The length to get.</returns>
 	/// <author>MathysC</author>
 	size_t getLength() const;
+
+	/// <returns>The way to get.</returns>
+	/// <author>MathysC</author>
+	Way getWay() const;
+
 	/// <summary>
 	/// Hit the ship at the given coordinates.
 	/// </summary>
