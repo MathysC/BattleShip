@@ -4,6 +4,11 @@ Board::Board() {}
 
 Board::~Board() {}
 
+std::vector<Ship> Board::getShips() const
+{
+	return this->ships;
+}
+
 bool Board::addShip(Ship _ship)
 {
 	//if (this->ships.size() < NB_SHIPS) {

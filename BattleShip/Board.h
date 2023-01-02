@@ -22,6 +22,10 @@ public:
 	/// <author>MathysC</author>
 	~Board();
 
+	/// <returns>the ships vector to get.</returns>
+	/// <author>MathysC</author>
+	std::vector<Ship> getShips() const;
+
 	/// <summary>
 	/// Add a ship to the Board if possible.
 	/// The constraints are:
