@@ -36,6 +36,10 @@ public:
 	/// <author>MathysC</author>
 	~Ship();
 
+
+	/// <returns>The length to get.</returns>
+	/// <author>MathysC</author>
+	size_t getLength() const;
 	/// <summary>
 	/// Hit the ship at the given coordinates.
 	/// </summary>
