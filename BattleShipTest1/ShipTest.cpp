@@ -6,19 +6,28 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BattleShipTest1
 {
-	Ship shipE = Ship(Way::EAST, 5, 0, 0);
-	Ship shipN = Ship(Way::EAST, 5, 0, 0);
-	Ship shipS = Ship(Way::EAST, 5, 0, 0);
-	Ship shipW = Ship(Way::EAST, 5, 0, 0);
-
+	const size_t l = 5;
+	Ship shipE = Ship(Way::EAST, l, 0, 0);
+	Ship shipN = Ship(Way::EAST, l, 0, 0);
+	Ship shipS = Ship(Way::EAST, l, 0, 0);
+	Ship shipW = Ship(Way::EAST, l, 0, 0);
+	
 	TEST_CLASS(ShipTest)
 	{
 	public:
 		TEST_METHOD_INITIALIZE(ShipInitialize) {
-			shipE = Ship(Way::EAST, 5, 0, 0);
-			shipN = Ship(Way::NORTH, 5, 0, 4);
-			shipS = Ship(Way::SOUTH, 5, 0, 0);
-			shipW = Ship(Way::WEST, 5, 4, 0);
+			shipE = Ship(Way::EAST, l, 0, 0);
+			shipN = Ship(Way::NORTH, l, 0, 4);
+			shipS = Ship(Way::SOUTH, l, 0, 0);
+			shipW = Ship(Way::WEST, l, 4, 0);
+		}
+
+		TEST_METHOD(TestGetLength) {
+			Assert::AreEqual(l, shipE.getLength());
+			Assert::AreEqual(l, shipN.getLength());
+			Assert::AreEqual(l, shipS.getLength());
+			Assert::AreEqual(l, shipW.getLength());
+
 		}
 
 		TEST_METHOD(TestHit) {
