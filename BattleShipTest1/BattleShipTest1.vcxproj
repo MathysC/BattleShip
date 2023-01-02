@@ -160,6 +160,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoardTest.cpp" />
     <ClCompile Include="ShipTest.cpp" />
     <ClCompile Include="SquareTest.cpp" />
     <ClCompile Include="pch.cpp">
