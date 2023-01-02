@@ -143,9 +143,7 @@
   <ItemGroup>
     <ClCompile Include="BattleShip.cpp" />
     <ClCompile Include="Board.cpp" />
-    <ClCompile Include="BoardState.cpp" />
     <ClCompile Include="Ship.cpp" />
-    <ClCompile Include="HitSquare.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
-    <ClInclude Include="BoardState.h" />
     <ClInclude Include="Ship.h" />
-    <ClInclude Include="HitSquare.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
