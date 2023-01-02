@@ -49,6 +49,11 @@ Way Ship::getWay() const
 	return this->way;
 }
 
+std::vector<Square> Ship::getSquares() const
+{
+	return this->squares;
+}
+
 bool Ship::hit(short const _x, short const _y)
 {
 	// If the ship has already sunk, it cannot be hit anymore.

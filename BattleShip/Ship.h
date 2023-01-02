@@ -45,6 +45,10 @@ public:
 	/// <author>MathysC</author>
 	Way getWay() const;
 
+	/// <returns>The squares to get.</returns>
+	/// <author>MathysC</author>
+	std::vector<Square> getSquares() const;
+
 	/// <summary>
 	/// Hit the ship at the given coordinates.
 	/// </summary>
